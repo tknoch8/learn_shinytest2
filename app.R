@@ -64,7 +64,7 @@ clean_data <- function(raw_data) {
   data.frame(
     Rank = seq_along(raw_data$results$term),
     Event = as.character(raw_data$results$term),
-    Count = count,
+    Count = count * 1.25,
     Frequency = sprintf("%.3f %%", (count / sum(count)) * 100),
     stringsAsFactors = FALSE
   )
